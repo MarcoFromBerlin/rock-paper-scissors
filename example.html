@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="scripts/script.js" defer></script>
+
+    <link href="prism/prism.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boiler Plate Example</title>
+    <script
+      src="https://kit.fontawesome.com/2c6793b698.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="prism/prism.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="header">
+        <div class="row">
+          <div class="col-2">Logo</div>
+          <div class="col-10"></div>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-10">
+            <div class="menu">
+              <ul>
+                <li><a class="current" href="#generals">Generals</a></li>
+                <li><a href="#columns">Columns</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#forms">Forms + Inputs</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#icons-social">Social Icons</a></li>
+                <li><a href="#margins">Margins + Paddings</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div id="generals">
+          <div class="generals mb-1">
+            <div class="row">
+              <a id="generals"></a>
+              <div class="col-12 pt-1">
+                <h4>General features</h4>
+              </div>
+              <div class="col-12 margins-example ph-1 pv-1">
+                <h5 class="text-thin pb-1">Download and install it with:</h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">npm i</div>
+                </h5>
+                <h5 class="text-thin pb-1">It will install</h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">
+                    node-sass <br />gh-pages(as dev dependency)
+                  </div>
+                </h5>
+                <h5 class="text-thin pb-1">
+                  package.json contains the following scripts:
+                </h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">
+                    "scripts": { <br />"sass": "node-sass --source-map
+                    dist/css/main.css.map --output-style compressed -w scss -o
+                    dist/css -- recursive ",<br />"publish": "gh-pages -d
+                    dist"<br />}
+                  </div>
+                </h5>
+                <h5 class="text-thin pb-1">Therefore for sass:</h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">npm run sass</div>
+                </h5>
+                <h5 class="text-thin pb-1">
+                  To publish it be sure the git repo is already synced and then
+                  just run:
+                </h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">npm run publish</div>
+                </h5>
+                <div class="col-12 ph-1 pv-1">
+                  <h5 class="text-thin">Files structure of the boiler plate</h5>
+                </div>
+                <div class="col-7 text-code-light text-black">
+                  <pre class="line-numbers">
+                <code class="language-markup">
+├── dist (or build)
+│ ├── css
+│ │ ├── main.css
+│ │ ├── main.css.map
+│ ├── images
+│ ├── index.html
+├── scss
+│ ├── base
+│ │ ├── _reset.scss
+│ │ ├── _root.scss
+│ │ ├── _typography.scss
+│ ├── components
+│ │ ├── _buttons.scss
+│ │ ├── _decorations.scss
+│ │ ├── _forms.scss
+│ │ ├── _icons.scss
+│ │ ├── _menu.scss
+│ │ ├── _utilities.scss
+│ ├── sections (empty by default)
+│ │ ├── _section_name_example.scss
+│ ├── variables
+│ │ ├── _aligns.scss
+│ │ ├── _colors.scss
+│ │ ├── _variables.scss
+│ ├── _functions.scss
+│ ├── _media.scss
+│ ├── main.css
+├── README.md
+├── package-lock.json
+├── package.json
+└── .gitignore
+                </code>
+              </pre>
+                </div>
+                <div class="col-12 ph-1 pv-1">
+                  <h4 class="text-thin pb-1">Smooth scrolling</h4>
+                  <h5 class="text-thin">
+                    Smooth scrolling is on by default, to disable is go to
+                    base/\_root.scss
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a id="columns"></a>
+        <div class="line-grey-3px"></div>
+        <div id="home__a">
+          <div class="home__a mt-1">
+            <div class="row">
+              <div class="col-12">
+                <h4>How columns and rows work</h4>
+              </div>
+            </div>
+            <div class="row mv-1">
+              <div class="col-12 full-col ph-1 pv-1">
+                This is a "col-12" into a default .row
+              </div>
+            </div>
+            <div class="row mv-1">
+              <div class="col-6 half-col ph-1 pv-1">
+                This is a "col-6" into a default .row
+              </div>
+              <div class="col-6 half-col ph-1 pv-1">
+                This is a "col-6" into a default .row
+              </div>
+            </div>
+            <div class="row mv-1">
+              <div class="col-3 third-col ph-1 pv-1">
+                This is a "col-3" into a default .row
+              </div>
+              <div class="col-3 third-col ph-1 pv-1">
+                This is a "col-3" into a default .row
+              </div>
+              <div class="col-3 third-col ph-1 pv-1">
+                This is a "col-3" into a default .row
+              </div>
+              <div class="col-3 third-col ph-1 pv-1">
+                This is a "col-3" into a default .row
+              </div>
+            </div>
+            <div class="row multi-row mv-1">
+              <div class="col-3 third-col ph-1 pv-1">
+                This is a "col-3" into a default .row
+              </div>
+              <div class="col-6 third-col ph-1 pv-1">
+                This is a "col-6" into a default .row
+                <div class="row-1 t-center-x pv-1">
+                  This is a .row-1, text centered
+                </div>
+                <div class="row-3 t-center-x pv-1">
+                  This is a .row-3, text centered
+                </div>
+              </div>
+              <div class="col-3 third-col ph-1 pv-1">
+                This is a "col-3" into a default .row
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-grey-3px"></div>
+        <a id="buttons"></a>
+        <div id="home__b ">
+          <div class="home__b mb-1">
+            <div class="row">
+              <div class="col-12 pt-1">
+                <h4>How buttons work</h4>
+              </div>
+              <div class="col-12 button-example ph-1 pv-1">
+                <h5 class="text-thin pt-1">Under "components/_buttons.scss"</h5>
+                <div class="row-1">
+                  <h5 class="text-thin pt-1">
+                    The function takes those arguments:
+                  </h5>
+                  <p>
+                    $color | $color-hover | $border-color | $text-norm |
+                    $text-hover | $type | $border | $size
+                  </p>
+                </div>
+                <div class="row pv-1">
+                  <div class="col-5 t-center-y t-center-x">
+                    <button class="btn-blue">This is a .btn-blue normal</button>
+                  </div>
+                  <div class="col-7 text-code-light">
+                    <p>
+                      &-blue {<br />@include button( $light-blue,
+                      $light-blue-hover, $light-blue, $light-blue-text-norm,
+                      $light-blue-text-hover, solid, 5px, normal );<br />}
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-5 t-center-y t-center-x">
+                    <button class="btn-blue-out">
+                      This is a .btn-blue-out small
+                    </button>
+                  </div>
+                  <div class="col-7 text-code-light">
+                    <p>
+                      &-blue-out {<br />@include button( $light-blue,
+                      $light-blue-hover, $light-blue, $light-blue-text-norm,
+                      $light-blue-text-hover, outlined, 20px, small );<br />}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-grey-3px"></div>
+        <a id="forms"></a>
+        <div id="home__c">
+          <div class="home__c">
+            <div class="row">
+              <div class="col-12 pv-1">
+                <h4>How Forms and Input Work</h4>
+              </div>
+            </div>
+            <div class="row-1 forms-example pv-1 ph-1">
+              <div class="row">
+                <div class="col-6">
+                  <input
+                    class="input-text-email"
+                    type="email"
+                    placeholder="example@email.com"
+                  />
+                </div>
+                <div class="col-6">
+                  <div class="newsletter">
+                    <input
+                      class="input-text-email"
+                      type="text"
+                      placeholder="Email"
+                      name="email"
+                    />
+                    <button>Submit</button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row-1">
+                    <div class="col-12">
+                      <p>Simple Input for a form with .input-text-email</p>
+                    </div>
+                    <div class="col-7 text-code-light text-black">
+                      <pre class="line-numbers">
+                <code class="language-markup">
+&lt;input
+class=&quot;input-text-email&quot;
+type=&quot;email&quot;
+placeholder=&quot;example@email.com&quot;
+/&gt;
+                </code>
+              </pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row-1">
+                    <div class="col-12">
+                      <p>
+                        Simple Input for an email with direct subscription with
+                        .newsletter
+                      </p>
+                    </div>
+                    <div class="col-7 text-code-light text-black">
+                      <pre class="line-numbers">
+                <code class="language-markup">
+&#x3C;div class=&#x22;newsletter&#x22;&#x3E;
+   &#x3C;input
+   class=&#x22;input-text-email&#x22;
+   type=&#x22;text&#x22;
+   placeholder=&#x22;Email&#x22;
+   name=&#x22;email&#x22;/&#x3E;
+   &#x3C;button&#x3E;Submit&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+                </code>
+              </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <select class="select-css" name="cars" id="cars">
+                    <option value="" disabled selected>Please Select</option>
+
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <textarea
+                    class="input-text-area"
+                    rows="5"
+                    cols="60"
+                    name="description"
+                  >
+              Enter details here...
+                  </textarea>
+                </div>
+                <div class="col-6">
+                  <div class="row-1">
+                    <div class="col-12">
+                      <p>Multiple selection .select-css</p>
+                    </div>
+                    <div class="col-7 text-code-light text-black">
+                      <pre class="line-numbers">
+                      <code class="language-markup">
+&lt;select class=&quot;select-css&quot; name=&quot;cars&quot; id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;&quot; disabled selected&gt;Please Select&lt;/option&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+                      </code>
+                    </pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row-1">
+                    <div class="col-12">
+                      <p>Simple Input text area with .input-text-area</p>
+                    </div>
+                    <div class="col-7 text-code-light text-black">
+                      <pre class="line-numbers">
+                      <code class="language-markup">
+&lt;textarea
+  class=&quot;input-text-area&quot;
+  rows=&quot;5&quot;
+  cols=&quot;60&quot;
+  name=&quot;description&quot;&gt;
+  Enter details here...
+&lt;/textarea&gt;
+                      </code>
+                    </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-grey-3px"></div>
+        <a id="typography"></a>
+        <div id="home__d">
+          <div class="home__d mb-1">
+            <div class="row">
+              <div class="col-12 pt-1">
+                <h4>How Typography works</h4>
+              </div>
+              <div class="col-12 typography-example ph-1 pv-1">
+                <h5 class="text-thin pv-1">Under "base/_typography.scss"</h5>
+                <div class="row-1">
+                  <h1 class="text-bold">h1 + .text-bold</h1>
+                  <h2 class="text-bold">h2 + .text-bold</h2>
+                  <h3 class="text-normal">h3 + .text-normal</h3>
+                  <h4 class="text-thin">h4 + .text-thin</h4>
+                  <h5 class="text-thin">h5 + .text-thin</h5>
+                  <h6 class="text-thin">h6 + .text-thin</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-grey-3px"></div>
+        <a id="icons-social"></a>
+        <div id="home__e">
+          <div class="home__e mb-1">
+            <div class="row">
+              <div class="col-12 pt-1">
+                <h4>How Social Icons work</h4>
+              </div>
+              <div class="col-12 icons-example ph-1 pv-1">
+                <h5 class="text-thin">Under "components/_icons.scss"</h5>
+                <h5 class="text-thin pv-1">Just use a .icons-social</h5>
+                <div class="row-1">
+                  <div class="icons-social">
+                    <ul>
+                      <li>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fab fa-youtube-square"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-7 text-code-light text-black">
+                  <pre class="line-numbers">
+                <code class="language-markup">
+               &lt;input
+                  class=&quot;input-text-email&quot;
+                  type=&quot;email&quot;
+                  placeholder=&quot;example@email.com&quot;
+                /&gt;
+                </code>
+              </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-grey-3px"></div>
+        <a id="margins"></a>
+        <div id="home__f">
+          <div class="home__f mb-1">
+            <div class="row">
+              <div class="col-12 pt-1">
+                <h4>How Margins and Paddings work</h4>
+              </div>
+              <div class="col-12 margins-example ph-1 pv-1">
+                <h5 class="text-thin">
+                  Under "variables/_aligns.scss" you can modify the functions
+                  and add or remove values
+                </h5>
+
+                <h5 class="text-thin pv-1">
+                  <div class="text-code-light">
+                    For margins: .mb-1~4 .mt-1~4 .mr-1~4 .ml-1~4 .mv-1~4 .mh-1~4
+                  </div>
+                </h5>
+                <h5 class="text-thin">
+                  <div class="text-code-light">
+                    For paddings: .pb-1~4 .pt-1~4 .pr-1~4 .pl-1~4 .pv-1~4
+                    .ph-1~4
+                  </div>
+                </h5>
+                <div class="col-12 ph-1 pv-1">
+                  <h5 class="text-thin">
+                    This is an example that gives a padding horr + vert of 1rem
+                  </h5>
+                </div>
+                <div class="col-7 text-code-light text-black">
+                  <pre class="line-numbers">
+                <code class="language-markup">
+               &lt;div class=&quot;col-12 ph-1 pv-1&quot;&gt;
+                &lt;h4&gt;This is an example&lt;/h4&gt;
+              &lt;/div&gt;
+                </code>
+              </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-grey-3px"></div>
+        <a id="generals"></a>
+        <div id="generals">
+          <div class="generals mb-1">
+            <div class="row">
+              <div class="col-12 pt-1">
+                <h4>General features</h4>
+              </div>
+              <div class="col-12 margins-example ph-1 pv-1">
+                <h5 class="text-thin pb-1">Download and install it with:</h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">npm i</div>
+                </h5>
+                <h5 class="text-thin pb-1">It will install</h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">
+                    node-sass <br />gh-pages(as dev dependency)
+                  </div>
+                </h5>
+                <h5 class="text-thin pb-1">
+                  package.json contains the following scripts:
+                </h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">
+                    "scripts": { <br />"sass": "node-sass --source-map
+                    dist/css/main.css.map --output-style compressed -w scss -o
+                    dist/css -- recursive ",<br />"publish": "gh-pages -d
+                    dist"<br />}
+                  </div>
+                </h5>
+                <h5 class="text-thin pb-1">Therefore for sass:</h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">npm run sass</div>
+                </h5>
+                <h5 class="text-thin pb-1">
+                  To publish it be sure the git repo is already synced and then
+                  just run:
+                </h5>
+                <h5 class="text-thin pb-1">
+                  <div class="text-code-light">npm run publish</div>
+                </h5>
+                <div class="col-12 ph-1 pv-1">
+                  <h5 class="text-thin">Files structure of the boiler plate</h5>
+                </div>
+                <div class="col-7 text-code-light text-black">
+                  <pre class="line-numbers">
+                <code class="language-markup">
+├── dist (or build)
+│ ├── css
+│ │ ├── main.css
+│ │ ├── main.css.map
+│ ├── images
+│ ├── index.html
+├── scss
+│ ├── base
+│ │ ├── _reset.scss
+│ │ ├── _root.scss
+│ │ ├── _typography.scss
+│ ├── components
+│ │ ├── _buttons.scss
+│ │ ├── _decorations.scss
+│ │ ├── _forms.scss
+│ │ ├── _icons.scss
+│ │ ├── _menu.scss
+│ │ ├── _utilities.scss
+│ ├── sections (empty by default)
+│ │ ├── _section_name_example.scss
+│ ├── variables
+│ │ ├── _aligns.scss
+│ │ ├── _colors.scss
+│ │ ├── _variables.scss
+│ ├── _functions.scss
+│ ├── _media.scss
+│ ├── main.css
+├── README.md
+├── package-lock.json
+├── package.json
+└── .gitignore
+                </code>
+              </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
