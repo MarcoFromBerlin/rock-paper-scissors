@@ -1,6 +1,6 @@
-// - rock (1) beats scissors(3)
-// - paper(2) beats rock(1)
-// - scissors(3) beats paper(2)
+// - rock (p1) beats scissors(p2)
+// - paper(p1) beats rock(p2)
+// - scissors(p1) beats paper(p2)
 
 // DOM
 const playerName = document.querySelector(".player");
@@ -51,7 +51,6 @@ const letsPlay = (playerName = "No Name", playerChoice) => {
   inCaseOfTie.sort((a, b) => b.total - a.total);
 
   if (countRock === 1 && countScissors === 1 && countPaper === 0)
-    // console.log("Case 1, the winner is", whoHasRock, "with rock");
     return (whoWins.textContent = `The winner is  ${whoHasRock} with rock!`);
   if (countRock === 1 && countScissors === 0 && countPaper === 1)
     return (whoWins.textContent = `The winner is  ${whoHasPaper} with paper!`);
