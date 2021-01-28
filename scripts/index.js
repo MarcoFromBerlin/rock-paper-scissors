@@ -1,5 +1,10 @@
 // - rock (p1) beats scissors(p2)
+// - scissors (p1) beats rock(p2)
+
 // - paper(p1) beats rock(p2)
+// - rock(p1) beats paper(p2)
+
+// - paper(p1) beats scissors(p2)
 // - scissors(p1) beats paper(p2)
 
 // DOM
