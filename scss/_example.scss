@@ -42,4 +42,8 @@ pre[class*="language-"] {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
 }
